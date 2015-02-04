@@ -1,0 +1,58 @@
+[user]
+    email = 
+    name = Grzegorz Kocjan
+
+[alias]
+    st = status
+
+    df = diff
+    ds = diff --staged
+
+    ci = commit
+    cia = commit --all
+    ciaa = commit --all --amend
+    ciam = commit --amend
+
+    br = branch
+    bra = branch -a
+
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lga = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit --all
+    lgm = log --graph --format=medium
+    lp = log -p
+
+    co = checkout
+
+    su = submodule update
+    sui = submodule update --init
+
+    pom = push origin master
+    f = fetch
+
+    # Borrowed from http://stackoverflow.com/questions/9651898/is-there-a-git-sed-or-equivalent/9652183#9652183
+    sed = ! git grep -z --full-name -l '.' | xargs -0 sed -i -e
+
+[log]
+    date = iso
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+
+[core]
+    autocrlf = input
+    editor = vim
+    excludesfile = ~/.gitignore_global
+
+[apply]
+    whitespace = nowarn
+
+[branch]
+    autosetuprebase = always
+
+[rerere]
+    enabled = 1
+
+[push]
+    default = upstream
